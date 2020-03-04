@@ -9,10 +9,16 @@ import {MatListModule} from '@angular/material/list';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { GameSetupComponent } from './game-setup/game-setup.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { RulesComponent } from './rules/rules.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    GameSetupComponent,
+    PageNotFoundComponent,
+    RulesComponent,
   ],
   imports: [
     BrowserModule,
