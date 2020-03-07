@@ -12,6 +12,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GameSetupComponent } from './game-setup/game-setup.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { RulesComponent } from './rules/rules.component';
+import {MatInputModule} from "@angular/material/input";
+import {MatSelectModule} from "@angular/material/select";
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { RulesComponent } from './rules/rules.component';
     MatIconModule,
     MatSidenavModule,
     MatListModule,
+    MatInputModule,
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
