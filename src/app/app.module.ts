@@ -14,6 +14,10 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { RulesComponent } from './rules/rules.component';
 import {MatInputModule} from "@angular/material/input";
 import {MatSelectModule} from "@angular/material/select";
+import { GuessComponent } from './guess/guess.component';
+import {MatGridListModule} from "@angular/material/grid-list";
+import { RememberComponent } from './remember/remember.component';
+import { ScoreComponent } from './score/score.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +25,9 @@ import {MatSelectModule} from "@angular/material/select";
     GameSetupComponent,
     PageNotFoundComponent,
     RulesComponent,
+    GuessComponent,
+    RememberComponent,
+    ScoreComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,6 +40,7 @@ import {MatSelectModule} from "@angular/material/select";
     MatListModule,
     MatInputModule,
     MatSelectModule,
+    MatGridListModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
