@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {GameService} from '../game.service';
 
 @Component({
   selector: 'app-game-setup',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./game-setup.component.scss']
 })
 export class GameSetupComponent implements OnInit {
+  roundDuration = 120;
 
-  constructor() { }
+  constructor(private gameService: GameService) {}
 
   ngOnInit() {
+  }
+
+  setRoundDuration() {
+    this.gameService.changeRoundDuration(this.roundDuration);
   }
 
 }
