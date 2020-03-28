@@ -1,1 +1,38 @@
-<p>rules works!</p>
+<div class="rules">
+  <h1>Rules</h1>
+  <p>
+    You can view the rules on <a href="https://whenidream.net/" target="_blank">this</a>
+    page.
+    On the bottom of that page, you can download the rules in pdf format too.
+  </p>
+  <p>
+    To play this version of the game you will need three distinct card type to
+    mark the different roles in the game. The following table shows the amount of
+    cards needed per role.
+  </p>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="Players">
+      <th mat-header-cell *matHeaderCellDef> Players </th>
+      <td mat-cell *matCellDef="let element"> {{element.players}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Fairies">
+      <th mat-header-cell *matHeaderCellDef> Fairies </th>
+      <td mat-cell *matCellDef="let element"> {{element.fairies}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Bogeymen">
+      <th mat-header-cell *matHeaderCellDef> Bogeymen </th>
+      <td mat-cell *matCellDef="let element"> {{element.bogeymen}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Sandmen">
+      <th mat-header-cell *matHeaderCellDef> Sandmen </th>
+      <td mat-cell *matCellDef="let element"> {{element.sandmen}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
