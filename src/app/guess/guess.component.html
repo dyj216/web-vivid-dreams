@@ -1,16 +1,28 @@
 <div class="guess">
   <mat-grid-list cols="3" rowHeight="100px">
-    <mat-grid-tile colspan="3" rowspan="5">
-      <h1>Placeholder</h1>
+    <mat-grid-tile colspan="3" rowspan="1">
+      <h2>
+        <countdown #cd [config]="countdownConfig" (event)="handleCountdownEvent($event)"></countdown>
+      </h2>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="3" rowspan="2">
+      <h1>{{ gameService.words[0] }}</h1>
     </mat-grid-tile>
     <mat-grid-tile colspan="1" rowspan="1">
-      <button mat-fab color="warn"><mat-icon>close</mat-icon></button>
+      <button mat-fab color="warn" (click)="fabPressed(gameService.incorrectlyGuessed)"><mat-icon>close</mat-icon></button>
     </mat-grid-tile>
     <mat-grid-tile colspan="1" rowspan="1">
-      <button mat-fab color="accent">Skip</button>
+      <button mat-fab color="accent" (click)="fabPressed(gameService.discarded)" [disabled]="!skipButtonEnabled">Skip</button>
     </mat-grid-tile>
     <mat-grid-tile colspan="1" rowspan="1">
-      <button mat-fab color="primary"><mat-icon>check</mat-icon></button>
+      <button mat-fab color="primary" (click)="fabPressed(gameService.correctlyGuessed)"><mat-icon>check</mat-icon></button>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="1" rowspan="1">
+      <h2>{{ gameService.incorrectlyGuessed.length }}</h2>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="1" rowspan="1"></mat-grid-tile>
+    <mat-grid-tile colspan="1" rowspan="1">
+      <h2>{{ gameService.correctlyGuessed.length }}</h2>
     </mat-grid-tile>
   </mat-grid-list>
 </div>
