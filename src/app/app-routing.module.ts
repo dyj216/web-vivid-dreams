@@ -5,7 +5,7 @@ import { GameSetupComponent } from './game-setup/game-setup.component';
 import { RulesComponent } from './rules/rules.component';
 import { GuessComponent } from './guess/guess.component';
 import { RememberComponent } from './remember/remember.component';
-import {ScoreComponent} from './score/score.component';
+import { ScoreComponent } from './score/score.component';
 
 
 const routes: Routes = [
