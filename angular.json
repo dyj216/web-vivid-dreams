@@ -69,6 +69,10 @@
                 }
               ]
             },
+            "en": {
+              "localize": ["en"],
+              "baseHref": "/en/"
+            },
             "hu": {
               "localize": ["hu"],
               "baseHref": "/hu/"
@@ -83,6 +87,9 @@
           "configurations": {
             "production": {
               "browserTarget": "web-vivid-dreams:build:production"
+            },
+            "en": {
+              "browserTarget": "web-vivid-dreams:build:en"
             },
             "hu": {
               "browserTarget": "web-vivid-dreams:build:hu"

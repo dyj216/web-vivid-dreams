@@ -1,0 +1,13 @@
+<button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Language">
+  <mat-icon>language</mat-icon>
+</button>
+<mat-menu #menu>
+  <ng-template ngFor let-item [ngForOf]="languages">
+    <a href="{{item.url}}">
+      <button mat-menu-item>
+        <span>{{item.text}}</span>
+      </button>
+    </a>
+  </ng-template>
+</mat-menu>
+

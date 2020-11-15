@@ -7,7 +7,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatTableModule } from '@angular/material/table';
 import { CountdownModule } from 'ngx-countdown';
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
+import { MatMenuModule } from '@angular/material/menu';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +22,7 @@ import { GuessComponent } from './guess/guess.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { RememberComponent } from './remember/remember.component';
 import { ScoreComponent } from './score/score.component';
+import { LangSelectorComponent } from './lang-selector/lang-selector.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,7 @@ import { ScoreComponent } from './score/score.component';
     GuessComponent,
     RememberComponent,
     ScoreComponent,
+    LangSelectorComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,6 +50,7 @@ import { ScoreComponent } from './score/score.component';
     MatSelectModule,
     MatGridListModule,
     MatTableModule,
+    MatMenuModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

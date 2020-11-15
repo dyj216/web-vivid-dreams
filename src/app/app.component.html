@@ -3,6 +3,8 @@
     <mat-toolbar color="primary" class="toolbar">
         <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
         <h1 class="app-name">{{ title }}</h1>
+        <span class="spacer"></span>
+        <app-lang-selector></app-lang-selector>
     </mat-toolbar>
 
     <mat-sidenav-container class="sidenav-container"
