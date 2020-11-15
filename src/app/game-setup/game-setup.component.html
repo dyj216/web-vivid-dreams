@@ -4,13 +4,16 @@
     <input matInput [(ngModel)]="roundDuration" type="number" name="duration">
   </mat-form-field>
 
-<!--  <mat-form-field class="full-width">-->
-<!--    <mat-label>Card pack</mat-label>-->
-<!--    <mat-select>-->
-<!--      <mat-option value="hungarian">-->
-<!--        Hungarian-->
-<!--      </mat-option>-->
-<!--    </mat-select>-->
-<!--  </mat-form-field>-->
-  <button mat-flat-button color="primary" routerLink="/guess" (click)="setRoundDuration()" i18n="start button">Start</button>
+  <mat-form-field class="full-width">
+    <mat-label i18n>Word pack</mat-label>
+    <mat-select [(value)]="langCode">
+      <mat-option value="hu" i18n>
+        Hungarian
+      </mat-option>
+      <mat-option value="en" i18n>
+        English
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <button mat-flat-button color="primary" (click)="setUpAndStartGame()" i18n="start button">Start</button>
 </form>

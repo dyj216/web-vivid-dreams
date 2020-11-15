@@ -1,13 +1,12 @@
 import { Injectable } from '@angular/core';
 
-import { WORDS } from './words';
 import { shuffle } from './util';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GameService {
-  words = WORDS;
+  words: string[];
   correctlyGuessed: string[] = [];
   incorrectlyGuessed: string[] = [];
   remembered: string[] = [];
@@ -21,6 +20,10 @@ export class GameService {
   roundDuration: number;
 
   constructor() { }
+
+  async loadWords(languageCode) {
+    this.words = (await import(`./words/${languageCode}.json`)).default;
+  }
 
   changeRoundDuration(duration: number) {
     this.roundDuration = duration;
