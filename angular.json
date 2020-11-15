@@ -13,6 +13,12 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "i18n": {
+        "sourceLocale": "en",
+        "locales": {
+          "hu": "src/locale/messages.hu.xlf"
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -22,6 +28,7 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
+            "localize": true,
             "aot": true,
             "assets": [
               "src/favicon.ico",
@@ -45,7 +52,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
@@ -62,6 +68,10 @@
                   "maximumError": "10kb"
                 }
               ]
+            },
+            "hu": {
+              "localize": ["hu"],
+              "baseHref": "/hu/"
             }
           }
         },
@@ -73,6 +83,9 @@
           "configurations": {
             "production": {
               "browserTarget": "web-vivid-dreams:build:production"
+            },
+            "hu": {
+              "browserTarget": "web-vivid-dreams:build:hu"
             }
           }
         },

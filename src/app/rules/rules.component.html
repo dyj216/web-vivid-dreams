@@ -1,12 +1,12 @@
 <div class="rules">
-  <h1>Rules</h1>
-  <button mat-flat-button color="primary" routerLink="/game-setup">New Game</button>
-  <p>
+  <h1 i18n="@@rules">Rules</h1>
+  <button mat-flat-button color="primary" routerLink="/game-setup" i18n="@@new_game">New Game</button>
+  <p i18n="rules paragraph|A paragraph about where the rules can be found">
     You can view the rules on <a href="https://whenidream.net/" target="_blank">this</a>
     page.
     On the bottom of that page, you can download the rules in pdf format too.
   </p>
-  <p>
+  <p i18n="this version paragraph|Lists the requirements of this version">
     To play this version of the game you will need three distinct card type to
     mark the different roles in the game. The following table shows the amount of
     cards needed per role.
@@ -14,22 +14,22 @@
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
     <ng-container matColumnDef="Players">
-      <th mat-header-cell *matHeaderCellDef> Players </th>
+      <th mat-header-cell i18n="@@players" *matHeaderCellDef>Players</th>
       <td mat-cell *matCellDef="let element"> {{element.players}} </td>
     </ng-container>
 
     <ng-container matColumnDef="Fairies">
-      <th mat-header-cell *matHeaderCellDef> Fairies </th>
+      <th mat-header-cell i18n="@@fairies" *matHeaderCellDef>Fairies</th>
       <td mat-cell *matCellDef="let element"> {{element.fairies}} </td>
     </ng-container>
 
     <ng-container matColumnDef="Bogeymen">
-      <th mat-header-cell *matHeaderCellDef> Bogeymen </th>
+      <th mat-header-cell i18n="@@bogeymen" *matHeaderCellDef>Bogeymen</th>
       <td mat-cell *matCellDef="let element"> {{element.bogeymen}} </td>
     </ng-container>
 
     <ng-container matColumnDef="Sandmen">
-      <th mat-header-cell *matHeaderCellDef> Sandmen </th>
+      <th mat-header-cell i18n="@@sandmen" *matHeaderCellDef>Sandmen</th>
       <td mat-cell *matCellDef="let element"> {{element.sandmen}} </td>
     </ng-container>
 
