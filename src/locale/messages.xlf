@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="rules" datatype="html">
+        <source>Rules</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/rules/rules.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="new_game" datatype="html">
+        <source>New Game</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/rules/rules.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="77d0110f79ea478afcb0d0e03d4cf410353fe726" datatype="html">
+        <source>Round duration (seconds)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/game-setup/game-setup.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description"> in seconds</note>
+        <note priority="1" from="meaning">round duration</note>
+      </trans-unit>
+      <trans-unit id="c1fb603bf1176012c7aa3e2f775b44f980ee15bd" datatype="html">
+        <source>Word pack</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/game-setup/game-setup.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dd7cc23cded9eebeeb684720d860174e5c342593" datatype="html">
+        <source> English </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/game-setup/game-setup.component.html</context>
+          <context context-type="linenumber">11,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="753f38dd4be566db75344dcd03e9a638b2e68761" datatype="html">
+        <source> Hungarian </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/game-setup/game-setup.component.html</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8434d4a28744d7df82cd39ef8da4266fcbc40064" datatype="html">
+        <source>Start</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/game-setup/game-setup.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <note priority="1" from="description">start button</note>
+      </trans-unit>
+      <trans-unit id="f06493c4de41314763c819c3ed7b49e5c4d2635e" datatype="html">
+        <source> You can view the rules on <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://whenidream.net/&quot; target=&quot;_blank&quot;&gt;"/>this<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;
+    "/> page. On the bottom of that page, you can download the rules in pdf format too. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/rules/rules.component.html</context>
+          <context context-type="linenumber">5,8</context>
+        </context-group>
+        <note priority="1" from="description">A paragraph about where the rules can be found</note>
+        <note priority="1" from="meaning">rules paragraph</note>
+      </trans-unit>
+      <trans-unit id="dea5e188e18b2a054a5c56435587504e33f93615" datatype="html">
+        <source> To play this version of the game you will need three distinct card type to mark the different roles in the game. The following table shows the amount of cards needed per role. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/rules/rules.component.html</context>
+          <context context-type="linenumber">10,13</context>
+        </context-group>
+        <note priority="1" from="description">Lists the requirements of this version</note>
+        <note priority="1" from="meaning">this version paragraph</note>
+      </trans-unit>
+      <trans-unit id="players" datatype="html">
+        <source>Players</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/rules/rules.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fairies" datatype="html">
+        <source>Fairies</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/rules/rules.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/score/score.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bogeymen" datatype="html">
+        <source>Bogeymen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/rules/rules.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/score/score.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="sandmen" datatype="html">
+        <source>Sandmen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/rules/rules.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/score/score.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="eb075d0450deb6f381616f7da4b9244ced843053" datatype="html">
+        <source>Skip</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/guess/guess.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <note priority="1" from="description">skip fab</note>
+      </trans-unit>
+      <trans-unit id="2198dc6fe8a01c17a70f3a5e6b4ef5d797c8cad0" datatype="html">
+        <source>Mark the remembered words:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/remember/remember.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <note priority="1" from="description">mark remembered words</note>
+      </trans-unit>
+      <trans-unit id="3ea51cf415feffef55e82c7b60e9486055837661" datatype="html">
+        <source>Finish</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/remember/remember.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <note priority="1" from="description">finish button</note>
+      </trans-unit>
+      <trans-unit id="fd275e249f8094e4de4f9c9899e5e34a40f302b2" datatype="html">
+        <source>Add up your score!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/score/score.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dreamer" datatype="html">
+        <source>Dreamer</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/score/score.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d4bd9dddd0fd52b4c11e2d5bcc7a6fee308e825b" datatype="html">
+        <source> Now select the new Dreamer and randomly get a new role! After clicking the button the new round starts immediately! </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/score/score.component.html</context>
+          <context context-type="linenumber">18,19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="db95b7aec12fddc43a7dbb0ed2d5460e597d344b" datatype="html">
+        <source>Next Round</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/score/score.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
