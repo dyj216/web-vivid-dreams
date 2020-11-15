@@ -9,7 +9,7 @@ import {Router} from '@angular/router';
 })
 export class GameSetupComponent implements OnInit {
   roundDuration = 120;
-  langCode = "hu";
+  langCode: string;
 
   constructor(
     private gameService: GameService,
@@ -17,6 +17,7 @@ export class GameSetupComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    this.langCode = window.location.pathname.split("/").reverse()[1];
   }
 
   async setUpAndStartGame() {
