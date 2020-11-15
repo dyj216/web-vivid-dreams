@@ -1,13 +1,21 @@
 <div class="score">
   <h3>Add up your score!</h3>
   <mat-list>
-    <mat-list-item><button mat-mini-fab color="primary">{{ gameService.dreamerPoints }}</button>Dreamer</mat-list-item>
-    <mat-list-item><button mat-mini-fab color="primary">{{ gameService.fairyPoints }}</button>Fairies</mat-list-item>
-    <mat-list-item><button mat-mini-fab color="primary">{{ gameService.bogeymanPoints }}</button>Bogeymen</mat-list-item>
-    <mat-list-item><button mat-mini-fab color="primary">{{ gameService.sandmanPoints }}</button>Sandmen</mat-list-item>
+    <mat-list-item><button mat-mini-fab color="primary">{{ gameService.dreamerPoints }}</button>
+      <span i18n="@@dreamer">Dreamer</span>
+    </mat-list-item>
+    <mat-list-item><button mat-mini-fab color="primary">{{ gameService.fairyPoints }}</button>
+      <span i18n="@@fairies">Fairies</span>
+    </mat-list-item>
+    <mat-list-item><button mat-mini-fab color="primary">{{ gameService.bogeymanPoints }}</button>
+      <span i18n="@@bogeymen">Bogeymen</span>
+    </mat-list-item>
+    <mat-list-item><button mat-mini-fab color="primary">{{ gameService.sandmanPoints }}</button>
+      <span i18n="@@sandmen">Sandmen</span>
+    </mat-list-item>
   </mat-list>
-  <p>
+  <p i18n>
     Now select the new Dreamer and randomly get a new role! After clicking the button the new round starts immediately!
   </p>
-  <button mat-flat-button color="primary" routerLink="/guess" (click)="gameService.newRound()">Next Round</button>
+  <button mat-flat-button color="primary" routerLink="/guess" (click)="gameService.newRound()" i18n>Next Round</button>
 </div>

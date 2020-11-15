@@ -12,7 +12,7 @@
       <button mat-fab color="warn" (click)="fabPressed(gameService.incorrectlyGuessed)"><mat-icon>close</mat-icon></button>
     </mat-grid-tile>
     <mat-grid-tile colspan="1" rowspan="1">
-      <button mat-fab color="accent" (click)="fabPressed(gameService.discarded)" [disabled]="!skipButtonEnabled">Skip</button>
+      <button mat-fab color="accent" (click)="fabPressed(gameService.discarded)" [disabled]="!skipButtonEnabled" i18n="skip fab">Skip</button>
     </mat-grid-tile>
     <mat-grid-tile colspan="1" rowspan="1">
       <button mat-fab color="primary" (click)="fabPressed(gameService.correctlyGuessed)"><mat-icon>check</mat-icon></button>
