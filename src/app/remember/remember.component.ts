@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {GameService} from '../game.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-remember',
@@ -8,9 +9,13 @@ import {GameService} from '../game.service';
 })
 export class RememberComponent implements OnInit {
 
-  constructor(public gameService: GameService) { }
+  constructor(
+    public gameService: GameService,
+    private router: Router,
+  ) { }
 
   ngOnInit() {
+    if (!this.gameService.setupComplete) this.router.navigate(['/']);
   }
 
 }

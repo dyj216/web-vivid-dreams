@@ -20,6 +20,7 @@ export class GuessComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    if (!this.gameService.setupComplete) this.router.navigate(['/']);
     this.gameService.shuffleWords();
     this.countdownConfig = {
       leftTime: this.gameService.roundDuration,

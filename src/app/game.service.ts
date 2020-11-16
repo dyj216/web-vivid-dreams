@@ -17,6 +17,8 @@ export class GameService {
   fairyPoints = 0;
   bogeymanPoints = 0;
 
+  setupComplete = false;
+
   roundDuration: number;
 
   constructor() { }

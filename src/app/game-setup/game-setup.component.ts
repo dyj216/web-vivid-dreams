@@ -45,6 +45,7 @@ export class GameSetupComponent implements OnInit {
     }
 
     this.gameService.newRound();
+    this.gameService.setupComplete = true;
     await this.router.navigate(['/', 'guess']);
   }
 }
