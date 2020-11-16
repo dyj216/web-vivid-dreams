@@ -21,8 +21,8 @@ export class GameService {
 
   constructor() { }
 
-  async loadWords(languageCode) {
-    this.words = (await import(`./words/${languageCode}.json`)).default;
+  loadWords(words: string[]) {
+    this.words = words;
   }
 
   changeRoundDuration(duration: number) {

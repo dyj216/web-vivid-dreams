@@ -1,10 +1,10 @@
 <form class="game-setup-form">
-  <mat-form-field class="full-width">
+  <mat-form-field class="full-width" appearance="outline">
     <mat-label i18n="round duration| in seconds">Round duration (seconds)</mat-label>
     <input matInput [(ngModel)]="roundDuration" type="number" name="duration">
   </mat-form-field>
 
-  <mat-form-field class="full-width">
+  <mat-form-field class="full-width" appearance="outline">
     <mat-label i18n>Word pack</mat-label>
     <mat-select [(value)]="langCode">
       <mat-option value="en" i18n>
@@ -13,7 +13,20 @@
       <mat-option value="hu" i18n>
         Hungarian
       </mat-option>
+      <mat-option value="custom" i18n="@@custom_words">
+        Custom words
+      </mat-option>
     </mat-select>
+  </mat-form-field>
+  <mat-form-field class="full-width" appearance="outline" *ngIf="langCode==='custom'">
+    <mat-label i18n="@@custom_words">
+      Custom words
+    </mat-label>
+    <textarea matInput [(ngModel)]="customWords" [ngModelOptions]="{standalone: true}"></textarea>
+    <mat-hint i18n>
+      Enter one word in each line or separated with a comma! Make sure there are enough words (>50) to play!
+      If there aren't enough words, the game will offer empty guesses.
+    </mat-hint>
   </mat-form-field>
   <button mat-flat-button color="primary" (click)="setUpAndStartGame()" i18n="start button">Start</button>
 </form>

@@ -60,14 +60,34 @@
           <context context-type="linenumber">14,15</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="custom_words" datatype="html">
+        <source> Custom words </source>
+        <target> Saját szavak </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/game-setup/game-setup.component.html</context>
+          <context context-type="linenumber">17,18</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/game-setup/game-setup.component.html</context>
+          <context context-type="linenumber">23,24</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="8434d4a28744d7df82cd39ef8da4266fcbc40064" datatype="html">
         <source>Start</source>
         <target>Start</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/game-setup/game-setup.component.html</context>
-          <context context-type="linenumber">15</context>
+          <context context-type="linenumber">31</context>
         </context-group>
         <note priority="1" from="description">start button</note>
+      </trans-unit>
+      <trans-unit id="8428f8a0c61b5d169564623c3b785279c50c13b8" datatype="html">
+        <source> Enter one word in each line or separated with a comma! Make sure there are enough words (&gt;50) to play! If there aren&apos;t enough words, the game will offer empty guesses. </source>
+        <target> Adj meg soronként egy szót, vagy válaszd el őket vesszővel! Legyen elég szavatok (&gt;50) a játékhoz! Ha nincs elég, akkor a játék üres mezőket fog mutatni. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/game-setup/game-setup.component.html</context>
+          <context context-type="linenumber">27,29</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="f06493c4de41314763c819c3ed7b49e5c4d2635e" datatype="html">
         <source> You can view the rules on <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://whenidream.net/&quot; target=&quot;_blank&quot;&gt;"/>this<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;
