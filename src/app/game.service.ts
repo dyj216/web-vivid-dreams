@@ -35,6 +35,17 @@ export class GameService {
     this.words = shuffle(this.words);
   }
 
+  putCurrentWordAway(newPlace: string[]) {
+    let currentWord = this.words.shift();
+    newPlace.push(currentWord);
+
+    if (this.words.length === 0) {
+      this.words.push(...this.discarded);
+      this.shuffleWords();
+      this.discarded = [];
+    }
+  }
+
   handleRemembering(word: string) {
     if (this.remembered.includes(word)) {
       this.remembered.splice(this.remembered.indexOf(word), 1);
@@ -65,9 +76,9 @@ export class GameService {
     this.dreamerPoints = 0;
     this.bogeymanPoints = 0;
     this.remembered = [];
-    this.discarded.concat(this.correctlyGuessed);
+    this.discarded.push(...this.correctlyGuessed);
     this.correctlyGuessed = [];
-    this.discarded.concat(this.incorrectlyGuessed);
+    this.discarded.push(...this.incorrectlyGuessed);
     this.incorrectlyGuessed = [];
   }
 }

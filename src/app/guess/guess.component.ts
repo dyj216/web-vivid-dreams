@@ -29,7 +29,7 @@ export class GuessComponent implements OnInit {
   }
 
   fabPressed(newPlace: string[]) {
-    newPlace.push(this.gameService.words.shift());
+    this.gameService.putCurrentWordAway(newPlace);
     if (this.skipButtonEnabled) {
       this.router.navigate(['/', 'remember']);
     }
