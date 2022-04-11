@@ -23,6 +23,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { RememberComponent } from './remember/remember.component';
 import { ScoreComponent } from './score/score.component';
 import { LangSelectorComponent } from './lang-selector/lang-selector.component';
+import {MatCheckboxModule} from "@angular/material/checkbox";
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { LangSelectorComponent } from './lang-selector/lang-selector.component';
     MatGridListModule,
     MatTableModule,
     MatMenuModule,
+    MatCheckboxModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

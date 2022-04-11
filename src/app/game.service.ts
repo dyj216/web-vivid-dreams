@@ -11,6 +11,7 @@ export class GameService {
   incorrectlyGuessed: string[] = [];
   remembered: string[] = [];
   discarded: string[] = [];
+  langCode: string = 'hu';
 
   dreamerPoints = 0;
   sandmanPoints = 0;
@@ -27,6 +28,17 @@ export class GameService {
     this.words = words;
   }
 
+  removeUsedWords() {
+    let usedWords: string[] = this.getItem(this.langCode);
+    let filteredWords = this.words.filter((word) => !usedWords.includes(word));
+    if (filteredWords.length === 0) {
+      this.removeItem(this.langCode);
+      filteredWords = this.words;
+    }
+    this.words = filteredWords;
+    console.log(this.words);
+  }
+
   changeRoundDuration(duration: number) {
     this.roundDuration = duration;
   }
@@ -38,6 +50,10 @@ export class GameService {
   putCurrentWordAway(newPlace: string[]) {
     let currentWord = this.words.shift();
     newPlace.push(currentWord);
+
+    let usedWords: string[] = this.getItem(this.langCode);
+    usedWords.push(currentWord);
+    this.setItem(this.langCode, usedWords);
 
     if (this.words.length === 0) {
       this.words.push(...this.discarded);
@@ -80,5 +96,22 @@ export class GameService {
     this.correctlyGuessed = [];
     this.discarded.push(...this.incorrectlyGuessed);
     this.incorrectlyGuessed = [];
+  }
+
+  getItem(key: string) {
+    const item = localStorage.getItem(key);
+    return (item) ? JSON.parse(item) : [];
+  }
+
+  setItem(key: string, value: any): void {
+    localStorage.setItem(key, Array.isArray(value) ? JSON.stringify(value) : JSON.stringify([value]));
+  }
+
+  removeItem(key: string): void {
+    localStorage.removeItem(key);
+  }
+
+  clearLocalStorage(): void {
+    localStorage.clear();
   }
 }

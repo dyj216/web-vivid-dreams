@@ -11,6 +11,7 @@ export class GameSetupComponent implements OnInit {
   roundDuration = 120;
   langCode: string;
   customWords: string;
+  clearUsedWords: boolean = true;
 
   constructor(
     private gameService: GameService,
@@ -19,6 +20,8 @@ export class GameSetupComponent implements OnInit {
 
   ngOnInit() {
     this.langCode = window.location.pathname.split("/").reverse()[1];
+    let storedValue = localStorage.getItem("clear-used-words");
+    this.clearUsedWords = storedValue ? JSON.parse(storedValue) : true;
   }
 
   async loadJsonWords(languageCode: string) {
@@ -43,7 +46,12 @@ export class GameSetupComponent implements OnInit {
     } else {
       this.gameService.loadWords(await this.loadJsonWords(this.langCode));
     }
-
+    this.gameService.langCode = this.langCode;
+    if (this.clearUsedWords) {
+      this.gameService.clearLocalStorage();
+    }
+    localStorage.setItem("clear-used-words", JSON.stringify(this.clearUsedWords));
+    this.gameService.removeUsedWords();
     this.gameService.newRound();
     this.gameService.setupComplete = true;
     await this.router.navigate(['/', 'guess']);
