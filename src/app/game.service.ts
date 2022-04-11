@@ -35,6 +35,15 @@ export class GameService {
     this.words = shuffle(this.words);
   }
 
+  handleRemembering(word: string) {
+    if (this.remembered.includes(word)) {
+      this.remembered.splice(this.remembered.indexOf(word), 1);
+    }
+    else {
+      this.remembered.push(word);
+    }
+  }
+
   score() {
     const extra = this.correctlyGuessed.length === this.remembered.length && this.correctlyGuessed.length > 0 ? 2 : 0;
     this.dreamerPoints = this.correctlyGuessed.length + extra;

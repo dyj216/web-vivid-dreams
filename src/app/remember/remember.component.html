@@ -2,7 +2,7 @@
   <h3 i18n="mark remembered words">Mark the remembered words:</h3>
   <mat-selection-list>
     <mat-list-option *ngFor="let word of gameService.correctlyGuessed"
-      (click)="gameService.remembered.push(word)">{{ word }}</mat-list-option>
+      (click)="gameService.handleRemembering(word)">{{ word }}</mat-list-option>
   </mat-selection-list>
   <button mat-flat-button color="primary" class="finish"
           routerLink="/score"
