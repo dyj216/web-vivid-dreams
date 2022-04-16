@@ -26,12 +26,20 @@
           <context context-type="linenumber">3</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="forget-used-words" datatype="html">
+        <source>Forget used words</source>
+        <target>Korábban használt szavak elfelejtése</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/game-setup/game-setup.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="77d0110f79ea478afcb0d0e03d4cf410353fe726" datatype="html">
         <source>Round duration (seconds)</source>
         <target>Köridő (másodpercek)</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/game-setup/game-setup.component.html</context>
-          <context context-type="linenumber">3</context>
+          <context context-type="linenumber">5</context>
         </context-group>
         <note priority="1" from="description"> in seconds</note>
         <note priority="1" from="meaning">round duration</note>
@@ -41,7 +49,7 @@
         <target>Szavak</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/game-setup/game-setup.component.html</context>
-          <context context-type="linenumber">8</context>
+          <context context-type="linenumber">10</context>
         </context-group>
       </trans-unit>
       <trans-unit id="dd7cc23cded9eebeeb684720d860174e5c342593" datatype="html">
@@ -49,7 +57,7 @@
         <target> angol </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/game-setup/game-setup.component.html</context>
-          <context context-type="linenumber">11,12</context>
+          <context context-type="linenumber">12,14</context>
         </context-group>
       </trans-unit>
       <trans-unit id="753f38dd4be566db75344dcd03e9a638b2e68761" datatype="html">
@@ -57,7 +65,7 @@
         <target> magyar </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/game-setup/game-setup.component.html</context>
-          <context context-type="linenumber">14,15</context>
+          <context context-type="linenumber">15,17</context>
         </context-group>
       </trans-unit>
       <trans-unit id="custom_words" datatype="html">
@@ -65,11 +73,11 @@
         <target> Saját szavak </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/game-setup/game-setup.component.html</context>
-          <context context-type="linenumber">17,18</context>
+          <context context-type="linenumber">18,20</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/game-setup/game-setup.component.html</context>
-          <context context-type="linenumber">23,24</context>
+          <context context-type="linenumber">24,26</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8434d4a28744d7df82cd39ef8da4266fcbc40064" datatype="html">
@@ -77,7 +85,7 @@
         <target>Start</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/game-setup/game-setup.component.html</context>
-          <context context-type="linenumber">31</context>
+          <context context-type="linenumber">33</context>
         </context-group>
         <note priority="1" from="description">start button</note>
       </trans-unit>
@@ -86,7 +94,7 @@
         <target> Adj meg soronként egy szót, vagy válaszd el őket vesszővel! Legyen elég szavatok (&gt;50) a játékhoz! Ha nincs elég, akkor a játék üres mezőket fog mutatni. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/game-setup/game-setup.component.html</context>
-          <context context-type="linenumber">27,29</context>
+          <context context-type="linenumber">28,31</context>
         </context-group>
       </trans-unit>
       <trans-unit id="f06493c4de41314763c819c3ed7b49e5c4d2635e" datatype="html">
@@ -96,7 +104,7 @@
     "/> az oldalon. Az oldal aljáról pdf formátumban is letölthetőek a szabályok. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/rules/rules.component.html</context>
-          <context context-type="linenumber">5,8</context>
+          <context context-type="linenumber">4,8</context>
         </context-group>
         <note priority="1" from="description">A paragraph about where the rules can be found</note>
         <note priority="1" from="meaning">rules paragraph</note>
@@ -106,7 +114,7 @@
         <target> Ahhoz, hogy a játék ezen változatát játszani tudjátok, szükségetek van három különböző kártyatípusra, amellyel a szerepeket tudjátok jelölni a játékban. Az itt látható táblázat mutatja, hogy hány kártyára van szükség szerepenként. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/rules/rules.component.html</context>
-          <context context-type="linenumber">10,13</context>
+          <context context-type="linenumber">9,13</context>
         </context-group>
         <note priority="1" from="description">Lists the requirements of this version</note>
         <note priority="1" from="meaning">this version paragraph</note>
@@ -195,7 +203,7 @@
         <target> Válasszatok egy új Álmodót és húzzatok egy új szerepet! Amint rányomtok a gombra, egy új kör kezdődik! </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/score/score.component.html</context>
-          <context context-type="linenumber">18,19</context>
+          <context context-type="linenumber">17,19</context>
         </context-group>
       </trans-unit>
       <trans-unit id="db95b7aec12fddc43a7dbb0ed2d5460e597d344b" datatype="html">
