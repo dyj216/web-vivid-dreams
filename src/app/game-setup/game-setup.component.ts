@@ -40,6 +40,9 @@ export class GameSetupComponent implements OnInit {
   }
 
   async setUpAndStartGame() {
+    if (this.clearUsedWords) {
+      this.gameService.clearLocalStorage();
+    }
     this.gameService.changeRoundDuration(this.roundDuration);
     if (this.langCode === 'custom') {
       this.gameService.loadWords(this.loadCustomWords());
@@ -47,11 +50,10 @@ export class GameSetupComponent implements OnInit {
       this.gameService.loadWords(await this.loadJsonWords(this.langCode));
     }
     this.gameService.langCode = this.langCode;
-    if (this.clearUsedWords) {
-      this.gameService.clearLocalStorage();
-    }
     localStorage.setItem("clear-used-words", JSON.stringify(this.clearUsedWords));
     this.gameService.removeUsedWords();
+    this.gameService.shuffleWords();
+    this.gameService.setArrayItem("words", this.gameService.words);
     this.gameService.newRound();
     this.gameService.setupComplete = true;
     await this.router.navigate(['/', 'guess']);

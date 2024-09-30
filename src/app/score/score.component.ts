@@ -12,7 +12,11 @@ export class ScoreComponent implements OnInit {
   constructor(
     public gameService: GameService,
     private router: Router,
-  ) { }
+  ) {
+    if (!this.gameService.setupComplete) {
+      this.gameService.loadGame();
+    }
+  }
 
   ngOnInit() {
     if (!this.gameService.setupComplete) this.router.navigate(['/']);

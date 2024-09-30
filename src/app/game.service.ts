@@ -29,31 +29,35 @@ export class GameService {
   }
 
   removeUsedWords() {
-    let usedWords: string[] = this.getItem(this.langCode);
+    let usedWords: string[] = this.getArrayItem(this.langCode);
     let filteredWords = this.words.filter((word) => !usedWords.includes(word));
     if (filteredWords.length === 0) {
       this.removeItem(this.langCode);
       filteredWords = this.words;
     }
     this.words = filteredWords;
-    console.log(this.words);
   }
 
   changeRoundDuration(duration: number) {
     this.roundDuration = duration;
+    this.setItem("roundDuration", this.roundDuration);
+    this.setItem("timeLeft", this.roundDuration);
   }
 
   shuffleWords() {
     this.words = shuffle(this.words);
   }
 
-  putCurrentWordAway(newPlace: string[]) {
+  putCurrentWordAway(newPlaceName: string, newPlace: string[]) {
     let currentWord = this.words.shift();
     newPlace.push(currentWord);
 
-    let usedWords: string[] = this.getItem(this.langCode);
+    this.setArrayItem(newPlaceName, newPlace);
+    this.setArrayItem("words", this.words);
+
+    let usedWords: string[] = this.getArrayItem(this.langCode);
     usedWords.push(currentWord);
-    this.setItem(this.langCode, usedWords);
+    this.setArrayItem(this.langCode, usedWords);
 
     if (this.words.length === 0) {
       this.words.push(...this.discarded);
@@ -69,6 +73,7 @@ export class GameService {
     else {
       this.remembered.push(word);
     }
+    this.setArrayItem("remembered", this.remembered);
   }
 
   score() {
@@ -96,15 +101,43 @@ export class GameService {
     this.correctlyGuessed = [];
     this.discarded.push(...this.incorrectlyGuessed);
     this.incorrectlyGuessed = [];
+
+    this.setArrayItem("discarded", this.discarded);
+    this.setArrayItem("correctlyGuessed", this.correctlyGuessed);
+    this.setArrayItem("incorrectlyGuessed", this.incorrectlyGuessed);
+    this.setArrayItem("remembered", this.remembered);
   }
 
-  getItem(key: string) {
+  getArrayItem(key: string) {
     const item = localStorage.getItem(key);
     return (item) ? JSON.parse(item) : [];
   }
 
-  setItem(key: string, value: any): void {
+  setArrayItem(key: string, value: any): void {
     localStorage.setItem(key, Array.isArray(value) ? JSON.stringify(value) : JSON.stringify([value]));
+  }
+
+  setItem(key: string, value: any) {
+    localStorage.setItem(key, JSON.stringify(value));
+  }
+
+  getItem(key: string) {
+    return localStorage.getItem(key);
+  }
+
+  loadGame() {
+    let roundDuration = this.getItem("roundDuration");
+    if (roundDuration === null) {
+      return
+    }
+    this.roundDuration = JSON.parse(roundDuration);
+    this.words = this.getArrayItem("words");
+    this.correctlyGuessed = this.getArrayItem("correctlyGuessed");
+    this.incorrectlyGuessed = this.getArrayItem("incorrectlyGuessed");
+    this.remembered = this.getArrayItem("remembered");
+    this.discarded = this.getArrayItem("discarded");
+    this.score();
+    this.setupComplete = true;
   }
 
   removeItem(key: string): void {
