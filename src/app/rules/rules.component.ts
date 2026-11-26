@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
 interface PlayerRoleCount {
   players: number,
@@ -21,6 +21,7 @@ const _PLAYER_ROLE_COUNT: PlayerRoleCount[] = [
     selector: 'app-rules',
     templateUrl: './rules.component.html',
     styleUrls: ['./rules.component.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class RulesComponent implements OnInit {

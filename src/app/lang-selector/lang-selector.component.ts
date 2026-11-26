@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
 
 interface LanguageInterface {
@@ -10,6 +10,7 @@ interface LanguageInterface {
     selector: 'app-lang-selector',
     templateUrl: './lang-selector.component.html',
     styleUrls: ['./lang-selector.component.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class LangSelectorComponent implements OnInit {

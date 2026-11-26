@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, OnInit, ViewChild, ChangeDetectionStrategy} from '@angular/core';
 import {GameService} from '../game.service';
 import {CountdownComponent, CountdownConfig, CountdownEvent, CountdownStatus} from 'ngx-countdown';
 import {Router} from '@angular/router';
@@ -7,6 +7,7 @@ import {Router} from '@angular/router';
     selector: 'app-guess',
     templateUrl: './guess.component.html',
     styleUrls: ['./guess.component.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class GuessComponent implements OnInit {

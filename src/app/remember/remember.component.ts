@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ChangeDetectionStrategy} from '@angular/core';
 import {GameService} from '../game.service';
 import {Router} from '@angular/router';
 
@@ -6,6 +6,7 @@ import {Router} from '@angular/router';
     selector: 'app-remember',
     templateUrl: './remember.component.html',
     styleUrls: ['./remember.component.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class RememberComponent implements OnInit {
