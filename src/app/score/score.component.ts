@@ -3,9 +3,10 @@ import { GameService } from '../game.service';
 import {Router} from '@angular/router';
 
 @Component({
-  selector: 'app-score',
-  templateUrl: './score.component.html',
-  styleUrls: ['./score.component.scss']
+    selector: 'app-score',
+    templateUrl: './score.component.html',
+    styleUrls: ['./score.component.scss'],
+    standalone: false
 })
 export class ScoreComponent implements OnInit {
 

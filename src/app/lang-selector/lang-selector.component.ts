@@ -7,9 +7,10 @@ interface LanguageInterface {
 }
 
 @Component({
-  selector: 'app-lang-selector',
-  templateUrl: './lang-selector.component.html',
-  styleUrls: ['./lang-selector.component.scss']
+    selector: 'app-lang-selector',
+    templateUrl: './lang-selector.component.html',
+    styleUrls: ['./lang-selector.component.scss'],
+    standalone: false
 })
 export class LangSelectorComponent implements OnInit {
   languages: LanguageInterface[];

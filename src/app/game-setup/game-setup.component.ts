@@ -3,9 +3,10 @@ import {GameService} from '../game.service';
 import {Router} from '@angular/router';
 
 @Component({
-  selector: 'app-game-setup',
-  templateUrl: './game-setup.component.html',
-  styleUrls: ['./game-setup.component.scss']
+    selector: 'app-game-setup',
+    templateUrl: './game-setup.component.html',
+    styleUrls: ['./game-setup.component.scss'],
+    standalone: false
 })
 export class GameSetupComponent implements OnInit {
   roundDuration = 120;

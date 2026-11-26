@@ -18,9 +18,10 @@ const _PLAYER_ROLE_COUNT: PlayerRoleCount[] = [
 ];
 
 @Component({
-  selector: 'app-rules',
-  templateUrl: './rules.component.html',
-  styleUrls: ['./rules.component.scss']
+    selector: 'app-rules',
+    templateUrl: './rules.component.html',
+    styleUrls: ['./rules.component.scss'],
+    standalone: false
 })
 export class RulesComponent implements OnInit {
   displayedColumns: string[] = ['Players', 'Fairies', 'Bogeymen', 'Sandmen'];

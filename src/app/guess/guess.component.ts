@@ -4,9 +4,10 @@ import {CountdownComponent, CountdownConfig, CountdownEvent, CountdownStatus} fr
 import {Router} from '@angular/router';
 
 @Component({
-  selector: 'app-guess',
-  templateUrl: './guess.component.html',
-  styleUrls: ['./guess.component.scss']
+    selector: 'app-guess',
+    templateUrl: './guess.component.html',
+    styleUrls: ['./guess.component.scss'],
+    standalone: false
 })
 export class GuessComponent implements OnInit {
   countdownConfig: CountdownConfig;

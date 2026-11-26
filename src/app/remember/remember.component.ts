@@ -3,9 +3,10 @@ import {GameService} from '../game.service';
 import {Router} from '@angular/router';
 
 @Component({
-  selector: 'app-remember',
-  templateUrl: './remember.component.html',
-  styleUrls: ['./remember.component.scss']
+    selector: 'app-remember',
+    templateUrl: './remember.component.html',
+    styleUrls: ['./remember.component.scss'],
+    standalone: false
 })
 export class RememberComponent implements OnInit {
 
