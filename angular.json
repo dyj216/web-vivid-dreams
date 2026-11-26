@@ -150,7 +150,6 @@
       }
     }
   },
-  "defaultProject": "web-vivid-dreams",
   "schematics": {
     "@schematics/angular:component": {
       "style": "scss"
