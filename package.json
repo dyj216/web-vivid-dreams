@@ -7,7 +7,9 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "eslint src/app",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build:pages": "ng build -c production --base-href /web-vivid-dreams/ && cp pages/index.html pages/404.html docs/",
+    "deploy": "npm run build:pages && ngh --dir=docs --no-notfound --no-silent --message \"Deploy $(git rev-parse --short HEAD)\""
   },
   "private": true,
   "dependencies": {

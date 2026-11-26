@@ -1,11 +1,16 @@
 # WebVividDreams
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.
+Angular app, deployed to GitHub Pages at https://dyj216.github.io/web-vivid-dreams/ in English (`/en/`) and Hungarian (`/hu/`).
 
 ## Deployment
 
-Run `ng deply --base-href=/web-vivid-dreams/`. Check the gh-pages branch if it has a redirecting index.html in the root.
-On the Github project settings page set the Pages Source to the gh-pages branch root.
+Run `npm run deploy`. It builds both locales into `docs/`, adds the site root files from `pages/` and publishes `docs/` to the `gh-pages` branch, replacing its contents.
+
+- `pages/index.html` redirects the site root to the English app.
+- `pages/404.html` handles deep links: GitHub Pages serves it for any unknown path, and it sends the visitor to the app of the locale in the URL, which then restores the requested route.
+
+To check the output without publishing, run `npm run build:pages` and look in `docs/`.
+On the GitHub project settings page, set the Pages source to the gh-pages branch root.
 
 ## Development server
 
@@ -17,15 +22,15 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Run `ng build` to build the project. The build artifacts will be stored in the `docs/` directory. Use `-c production` for a production build.
 
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Linting
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Run `npm run lint` to lint the app with ESLint.
 
 ## Further help
 
