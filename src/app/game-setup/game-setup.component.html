@@ -20,15 +20,17 @@
       </mat-option>
     </mat-select>
   </mat-form-field>
-  <mat-form-field class="full-width" appearance="outline" *ngIf="langCode==='custom'">
-    <mat-label i18n="@@custom_words">
+  @if (langCode==='custom') {
+    <mat-form-field class="full-width" appearance="outline">
+      <mat-label i18n="@@custom_words">
       Custom words
     </mat-label>
-    <textarea matInput [(ngModel)]="customWords" [ngModelOptions]="{standalone: true}"></textarea>
-    <mat-hint i18n>
+      <textarea matInput [(ngModel)]="customWords" [ngModelOptions]="{standalone: true}"></textarea>
+      <mat-hint i18n>
       Enter one word in each line or separated with a comma! Make sure there are enough words (>50) to play!
       If there aren't enough words, the game will offer empty guesses.
     </mat-hint>
-  </mat-form-field>
+    </mat-form-field>
+  }
   <button mat-flat-button color="primary" (click)="setUpAndStartGame()" i18n="start button">Start</button>
 </form>
