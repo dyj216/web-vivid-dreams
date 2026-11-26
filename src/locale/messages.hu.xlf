@@ -98,9 +98,9 @@
         </context-group>
       </trans-unit>
       <trans-unit id="f06493c4de41314763c819c3ed7b49e5c4d2635e" datatype="html">
-        <source> You can view the rules on <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://whenidream.net/&quot; target=&quot;_blank&quot;&gt;"/>this<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;
+        <source> You can view the rules on <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://boardgamegeek.com/boardgame/198454/when-i-dream&quot; target=&quot;_blank&quot;&gt;"/>this<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;
     "/> page. On the bottom of that page, you can download the rules in pdf format too. </source>
-        <target> A szabályok megtekinthetőek <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://whenidream.net/&quot; target=&quot;_blank&quot;&gt;"/>ezen<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;
+        <target> A szabályok megtekinthetőek <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://boardgamegeek.com/boardgame/198454/when-i-dream&quot; target=&quot;_blank&quot;&gt;"/>ezen<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;
     "/> az oldalon. Az oldal aljáról pdf formátumban is letölthetőek a szabályok. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/rules/rules.component.html</context>
