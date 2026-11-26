@@ -31,10 +31,10 @@ export class GuessComponent implements OnInit {
 
   ngOnInit() {
     if (!this.gameService.setupComplete) {
-      this.router.navigate(['/']);
+      void this.router.navigate(['/']);
     }
     this.countdownConfig = {
-      leftTime: this.isLoadedGame ? JSON.parse(this.gameService.getItem("timeLeft")) : this.gameService.roundDuration,
+      leftTime: this.isLoadedGame ? (JSON.parse(this.gameService.getItem("timeLeft")) as number) : this.gameService.roundDuration,
       format: 'mm:ss'
     };
   }
@@ -42,14 +42,14 @@ export class GuessComponent implements OnInit {
   fabPressed(newPlaceName: string, newPlace: string[]) {
     this.gameService.putCurrentWordAway(newPlaceName, newPlace);
     if (this.skipButtonEnabled) {
-      this.router.navigate(['/', 'remember']);
+      void this.router.navigate(['/', 'remember']);
     }
   }
 
   handleCountdownEvent(event: CountdownEvent) {
     if (event.action === "start") {
       let timeLeft = event.left / 1000;
-      const timer = setInterval(function (gameService) {
+      const timer = setInterval((gameService: GameService) => {
         if (timeLeft <= 0) {
           clearInterval(timer);
           return;

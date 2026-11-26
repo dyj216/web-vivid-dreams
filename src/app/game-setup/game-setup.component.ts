@@ -22,12 +22,13 @@ export class GameSetupComponent implements OnInit {
 
   ngOnInit() {
     this.langCode = window.location.pathname.split("/").reverse()[1];
-    let storedValue = localStorage.getItem("clear-used-words");
-    this.clearUsedWords = storedValue ? JSON.parse(storedValue) : true;
+    const storedValue = localStorage.getItem("clear-used-words");
+    this.clearUsedWords = storedValue ? (JSON.parse(storedValue) as boolean) : true;
   }
 
-  async loadJsonWords(languageCode: string) {
-    return (await import(`../words/${languageCode}.json`)).default;
+  async loadJsonWords(languageCode: string): Promise<string[]> {
+    const module = (await import(`../words/${languageCode}.json`)) as { default: string[] };
+    return module.default;
   }
 
   loadCustomWords() {
@@ -35,10 +36,7 @@ export class GameSetupComponent implements OnInit {
     if (words.length === 1) {
       words = this.customWords.split('\n');
     }
-    for (let word of words) {
-      word.trim();
-    }
-    return words;
+    return words.map((word) => word.trim()).filter((word) => word.length > 0);
   }
 
   async setUpAndStartGame() {

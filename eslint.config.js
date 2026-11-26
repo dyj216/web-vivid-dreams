@@ -15,7 +15,7 @@ module.exports = tseslint.config(
     ],
     languageOptions: {
       parserOptions: {
-        projectService: true,
+        project: ['./tsconfig.app.json', './tsconfig.spec.json'],
         tsconfigRootDir: __dirname,
       },
     },

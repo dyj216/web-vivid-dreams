@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 interface PlayerRoleCount {
   players: number,
@@ -24,13 +24,8 @@ const _PLAYER_ROLE_COUNT: PlayerRoleCount[] = [
     changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
-export class RulesComponent implements OnInit {
+export class RulesComponent {
   displayedColumns: string[] = ['Players', 'Fairies', 'Bogeymen', 'Sandmen'];
   dataSource = _PLAYER_ROLE_COUNT;
-
-  constructor() { }
-
-  ngOnInit() {
-  }
 
 }

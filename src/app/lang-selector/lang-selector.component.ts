@@ -25,7 +25,7 @@ export class LangSelectorComponent implements OnInit {
     ];
     const loc = window.location;
     const base = loc.pathname.split("/").reverse()[2];
-    for (let element of this.languages) {
+    for (const element of this.languages) {
       element.url = [loc.origin, base, element.url].join("/");
     }
   }

@@ -22,14 +22,12 @@ export class GameService {
 
   roundDuration: number;
 
-  constructor() { }
-
   loadWords(words: string[]) {
     this.words = words;
   }
 
   removeUsedWords() {
-    let usedWords: string[] = this.getArrayItem(this.langCode);
+    const usedWords = this.getArrayItem(this.langCode);
     let filteredWords = this.words.filter((word) => !usedWords.includes(word));
     if (filteredWords.length === 0) {
       this.removeItem(this.langCode);
@@ -49,13 +47,13 @@ export class GameService {
   }
 
   putCurrentWordAway(newPlaceName: string, newPlace: string[]) {
-    let currentWord = this.words.shift();
+    const currentWord = this.words.shift();
     newPlace.push(currentWord);
 
     this.setArrayItem(newPlaceName, newPlace);
     this.setArrayItem("words", this.words);
 
-    let usedWords: string[] = this.getArrayItem(this.langCode);
+    const usedWords = this.getArrayItem(this.langCode);
     usedWords.push(currentWord);
     this.setArrayItem(this.langCode, usedWords);
 
@@ -108,16 +106,16 @@ export class GameService {
     this.setArrayItem("remembered", this.remembered);
   }
 
-  getArrayItem(key: string) {
+  getArrayItem(key: string): string[] {
     const item = localStorage.getItem(key);
-    return (item) ? JSON.parse(item) : [];
+    return item ? (JSON.parse(item) as string[]) : [];
   }
 
-  setArrayItem(key: string, value: any): void {
+  setArrayItem(key: string, value: string | string[]): void {
     localStorage.setItem(key, Array.isArray(value) ? JSON.stringify(value) : JSON.stringify([value]));
   }
 
-  setItem(key: string, value: any) {
+  setItem(key: string, value: unknown) {
     localStorage.setItem(key, JSON.stringify(value));
   }
 
@@ -126,11 +124,11 @@ export class GameService {
   }
 
   loadGame() {
-    let roundDuration = this.getItem("roundDuration");
+    const roundDuration = this.getItem("roundDuration");
     if (roundDuration === null) {
       return
     }
-    this.roundDuration = JSON.parse(roundDuration);
+    this.roundDuration = JSON.parse(roundDuration) as number;
     this.words = this.getArrayItem("words");
     this.correctlyGuessed = this.getArrayItem("correctlyGuessed");
     this.incorrectlyGuessed = this.getArrayItem("incorrectlyGuessed");

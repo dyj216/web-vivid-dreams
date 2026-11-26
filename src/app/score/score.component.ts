@@ -21,7 +21,7 @@ export class ScoreComponent implements OnInit {
   }
 
   ngOnInit() {
-    if (!this.gameService.setupComplete) this.router.navigate(['/']);
+    if (!this.gameService.setupComplete) void this.router.navigate(['/']);
   }
 
 }

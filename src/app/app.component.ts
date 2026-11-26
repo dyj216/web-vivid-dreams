@@ -8,7 +8,7 @@ import {ChangeDetectorRef, Component, OnDestroy, ChangeDetectionStrategy} from '
     changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
-export class AppComponent {
+export class AppComponent implements OnDestroy {
   title = 'Vivid Dreams';
 
   mobileQuery: MediaQueryList;

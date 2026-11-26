@@ -1,4 +1,4 @@
-import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { GuessComponent } from './guess.component';
 import { GameService } from '../game.service';
@@ -7,12 +7,11 @@ describe('GuessComponent', () => {
   let component: GuessComponent;
   let fixture: ComponentFixture<GuessComponent>;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
       declarations: [ GuessComponent ]
-    })
-    .compileComponents();
-  }));
+    }).compileComponents();
+  });
 
   beforeEach(() => {
     const gameService = TestBed.inject(GameService);

@@ -1,8 +1,8 @@
 // from https://bost.ocks.org/mike/shuffle/
-export function shuffle(array) {
+export function shuffle<T>(array: T[]): T[] {
   let m = array.length;
-  let t;
-  let i;
+  let t: T;
+  let i: number;
 
   // While there remain elements to shuffle…
   while (m) {
