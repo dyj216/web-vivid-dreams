@@ -86,24 +86,24 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "web-vivid-dreams:build"
+            "buildTarget": "web-vivid-dreams:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "web-vivid-dreams:build:production"
+              "buildTarget": "web-vivid-dreams:build:production"
             },
             "en": {
-              "browserTarget": "web-vivid-dreams:build:en"
+              "buildTarget": "web-vivid-dreams:build:en"
             },
             "hu": {
-              "browserTarget": "web-vivid-dreams:build:hu"
+              "buildTarget": "web-vivid-dreams:build:hu"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "web-vivid-dreams:build"
+            "buildTarget": "web-vivid-dreams:build"
           }
         },
         "test": {
