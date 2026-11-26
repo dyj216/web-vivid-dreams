@@ -1,7 +1,7 @@
 <div class="remember">
   <h3 i18n="mark remembered words">Mark the remembered words:</h3>
   <mat-selection-list>
-    @for (word of gameService.correctlyGuessed; track word) {
+    @for (word of gameService.correctlyGuessed; track $index) {
       <mat-list-option
       (click)="gameService.handleRemembering(word)">{{ word }}</mat-list-option>
     }
