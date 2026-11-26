@@ -6,7 +6,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatTableModule } from '@angular/material/table';
-import { CountdownModule } from 'ngx-countdown';
+import { CountdownComponent } from 'ngx-countdown';
 import { FormsModule } from '@angular/forms';
 import { MatMenuModule } from '@angular/material/menu';
 
@@ -40,7 +40,7 @@ import {MatCheckboxModule} from "@angular/material/checkbox";
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    CountdownModule,
+    CountdownComponent,
     FormsModule,
     MatButtonModule,
     MatToolbarModule,
